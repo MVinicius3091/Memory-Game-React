@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fundo {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding: 2px 0 0 0;
+}
+
+.container {
+  background-image: url("../public/assets/imagens/fundo.png");
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+h2 {
+  position: absolute;
+  color: white;
+  top: 50px;
+  left: 250px;
+}
+.logo {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+.logo img {
+  width: 200px;
+}
+
+.back {
+  position: relative;
+  margin: auto;
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(77, 74, 74, 0.5);
+}
+
+.card {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.front-card,
+.back-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.45);
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front-card {
+  transform: rotateY(180deg);
+  background-color: black;
+}
+
+.back-card {
+  color: black;
+  background-color: cornflowerblue;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#gameOver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+}
+
+#restart {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  background-color: turquoise;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#gameBoard {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 1120px) {
+  h2 {
+    position: absolute;
+    color: white;
+    top: -30px;
+    left: 0;
+  }
+}
